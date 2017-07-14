@@ -1,10 +1,13 @@
 from __future__ import absolute_import, unicode_literals
 
 from django.db import models
+from multiprocessing import get_context
 from wagtail.wagtailadmin.edit_handlers import FieldPanel
 from wagtail.wagtailcore.fields import RichTextField
 
 from wagtail.wagtailcore.models import Page
+
+from home.forms import PagingForm
 
 
 class HomePage(Page):
@@ -22,6 +25,13 @@ class EmployeePage(Page):
         FieldPanel('body', classname="full"),
     ]
 
+    def get_context(self, request):
+        # Update context to include first 100 employees
+        context = super(EmployeePage, self).get_context(request)
+        context['employee_list'] = Employee.objects.all().select_related()[:100]
+        context['form'] = PagingForm()
+        return context
+
 
 class DepartmentPage(Page):
     body = RichTextField(blank=True)
@@ -29,6 +39,12 @@ class DepartmentPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
     ]
+
+    def get_context(self, request):
+        # Update context to include department list
+        context = super(DepartmentPage, self).get_context(request)
+        context['department_list'] = Department.objects.all().order_by('dept_no')
+        return context
 
 
 class ManagerPage(Page):
@@ -39,13 +55,7 @@ class ManagerPage(Page):
     ]
 
 
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
+# Model generated from an existing database
 
 class Employee(models.Model):
     emp_no = models.IntegerField(primary_key=True)

@@ -1,8 +1,14 @@
-from rest_framework import generics
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
 
-from home.models import Employee
+from .forms import PagingForm
 
 
-class EmployeeCollection(generics.ListCreateAPIView):
-    queryset = Employee.objects.all()
-    # serializer_class = PostSerializer
+def get_employees(request):
+    if request.method == 'POST':
+        form = PagingForm(request.POST)
+    else:
+        form = PagingForm()
+
+    #return render(request, '/employee-list/', {'form': form})
+    return HttpResponseRedirect(reversed(''), kwargs={'item_count': 10, 'item_start': 20})

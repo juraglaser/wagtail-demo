@@ -5,6 +5,58 @@
 {% block body_class %}template-employeepage{% endblock %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
-    {{ page.body|richtext }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <h1>{{ page.title }}</h1>
+                {{ page.body|richtext }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <form action="/api/employee/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Employee List</div>
+                    <table class="table table-striped">
+                        <thead>
+                            <th>&nbsp;</th>
+                            <th>Name</th>
+                            <th>Birth Date</th>
+                            <th>Hire Date</th>
+                            <th>Positions</th>
+                            <th>Department</th>
+                        </thead>
+                        <tbody>
+                            {% for emp in employee_list %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ emp.first_name }} {{ emp.last_name }}</td>
+                                    <td>{{ emp.birth_date }}</td>
+                                    <td>{{ emp.hire_date }}</td>
+                                    <td>
+                                        {% for title in emp.title_set.all %}
+                                            {{ title.title }}{% if not forloop.last %},{% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td>
+                                        {% for dept in emp.dept_emp_set.all %}
+                                            {{ dept.dept_no.dept_name }}{% if not forloop.last %},{% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

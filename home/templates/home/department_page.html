@@ -5,6 +5,29 @@
 {% block body_class %}template-departmentpage{% endblock %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
-    {{ page.body|richtext }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <h1>{{ page.title }}</h1>
+                {{ page.body|richtext }}
+                <div class="panel panel-default">
+                    <div class="panel-heading">Department List</div>
+                    <table class="table table-striped">
+                        <thead>
+                            <th>No.</th>
+                            <th>Name</th>
+                        </thead>
+                        <tbody>
+                            {% for dept in department_list %}
+                                <tr>
+                                    <td>{{ dept.dept_no }}</td>
+                                    <td>{{ dept.dept_name }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
