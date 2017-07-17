@@ -2,6 +2,11 @@ from __future__ import absolute_import, unicode_literals
 
 from django.db import models
 from multiprocessing import get_context
+
+from django.db.models import Q
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.template.response import TemplateResponse
 from wagtail.wagtailadmin.edit_handlers import FieldPanel
 from wagtail.wagtailcore.fields import RichTextField
 
@@ -25,12 +30,35 @@ class EmployeePage(Page):
         FieldPanel('body', classname="full"),
     ]
 
-    def get_context(self, request):
-        # Update context to include first 100 employees
+    # def get_context(self, request):
+    #     # Update context to include first 100 employees
+    #     context = super(EmployeePage, self).get_context(request)
+    #     context['employee_list'] = Employee.objects.all().select_related()[:100]
+    #     context['form'] = PagingForm()
+    #     return context
+
+    def serve(self, request):
+        # return super(EmployeePage, self).serve(request)
+        # return TemplateResponse(request, self.get_template(request), self.get_context(request))
         context = super(EmployeePage, self).get_context(request)
-        context['employee_list'] = Employee.objects.all().select_related()[:100]
         context['form'] = PagingForm()
-        return context
+        if request.method == 'POST':
+            if request.POST['items_count'] == '':
+                count = 100
+            else:
+                count = int( request.POST['items_count'] )
+            name = request.POST['name']
+            context['employee_list'] = Employee.objects.filter(
+                Q(first_name__contains=name) | Q(last_name__contains=name)
+            )[:count]
+        else:
+            context['employee_list'] = Employee.objects.all().select_related()[:100]
+        return TemplateResponse(
+          request,
+          self.get_template(request),
+          context
+        )
+        # return render(request, 'home/employee_page.html', context)
 
 
 class DepartmentPage(Page):

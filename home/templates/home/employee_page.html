@@ -13,8 +13,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-xs-12">
-                <form action="/api/employee/" method="post">
+            <div class="col-md-8 col-md-offset-2 col-xs-12" style="padding-bottom:15px">
+                <form action="/employee-list/" method="post">
                     {% csrf_token %}
                     {{ form }}
                     <input type="submit" value="Submit" />
@@ -32,7 +32,6 @@
                             <th>Birth Date</th>
                             <th>Hire Date</th>
                             <th>Positions</th>
-                            <th>Department</th>
                         </thead>
                         <tbody>
                             {% for emp in employee_list %}
@@ -44,11 +43,6 @@
                                     <td>
                                         {% for title in emp.title_set.all %}
                                             {{ title.title }}{% if not forloop.last %},{% endif %}
-                                        {% endfor %}
-                                    </td>
-                                    <td>
-                                        {% for dept in emp.dept_emp_set.all %}
-                                            {{ dept.dept_no.dept_name }}{% if not forloop.last %},{% endif %}
                                         {% endfor %}
                                     </td>
                                 </tr>
