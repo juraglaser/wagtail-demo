@@ -13,3 +13,6 @@ def get_employees(request):
 
     #return render(request, '/employee-list/', {'form': form})
     return HttpResponseRedirect(reverse('home:employee_page'), kwargs={'item_count': 10, 'item_start': 20})
+
+def get_docdoc_static(request):
+    return render(re)

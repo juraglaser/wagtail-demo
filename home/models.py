@@ -30,16 +30,7 @@ class EmployeePage(Page):
         FieldPanel('body', classname="full"),
     ]
 
-    # def get_context(self, request):
-    #     # Update context to include first 100 employees
-    #     context = super(EmployeePage, self).get_context(request)
-    #     context['employee_list'] = Employee.objects.all().select_related()[:100]
-    #     context['form'] = PagingForm()
-    #     return context
-
     def serve(self, request):
-        # return super(EmployeePage, self).serve(request)
-        # return TemplateResponse(request, self.get_template(request), self.get_context(request))
         context = super(EmployeePage, self).get_context(request)
         context['form'] = PagingForm()
         if request.method == 'POST':
@@ -58,7 +49,6 @@ class EmployeePage(Page):
           self.get_template(request),
           context
         )
-        # return render(request, 'home/employee_page.html', context)
 
 
 class DepartmentPage(Page):

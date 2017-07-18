@@ -1,0 +1,1 @@
+(function(){window.translations={this_field_is_required:"This field is required",only_digit:"Only values from 0-9 are allowed",email_format:"Invalid email format",at_least_6_characters:"at least 6 characters",incorrect_number_format:"digit only"}}).call(this);

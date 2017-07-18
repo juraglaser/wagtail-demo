@@ -3,6 +3,7 @@ from __future__ import absolute_import, unicode_literals
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 from wagtail.wagtailadmin import urls as wagtailadmin_urls
 from wagtail.wagtailcore import urls as wagtail_urls
@@ -18,6 +19,9 @@ urlpatterns = [
     url(r'^documents/', include(wagtaildocs_urls)),
 
     url(r'^search/$', search_views.search, name='search'),
+
+    url(r'^docdoc/$', TemplateView.as_view(template_name='docdoc_pages/search.html'), name="docdoc_search"),
+    url(r'^docdoc/provider-detail/$', TemplateView.as_view(template_name='docdoc_pages/provider-detail.html'), name="docdoc_provider_detail"),
 
     # API
     url(r'^api/employee/$', views.get_employees),
