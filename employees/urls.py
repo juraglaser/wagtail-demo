@@ -20,8 +20,11 @@ urlpatterns = [
 
     url(r'^search/$', search_views.search, name='search'),
 
-    url(r'^docdoc/$', TemplateView.as_view(template_name='docdoc_pages/search.html'), name="docdoc_search"),
-    url(r'^docdoc/provider-detail/$', TemplateView.as_view(template_name='docdoc_pages/provider-detail.html'), name="docdoc_provider_detail"),
+    url(r'^docdoc/$', TemplateView.as_view(template_name='docdoc_pages/index.html'), name="docdoc_index"),
+    url(r'^docdoc/search/$', TemplateView.as_view(template_name='docdoc_pages/search.html'), name="docdoc_search"),
+    url(r'^docdoc/doctor-detail/$', TemplateView.as_view(template_name='docdoc_pages/doctor-detail.html'), name="docdoc_doctor_detail"),
+    url(r'^docdoc/clinic-detail/$', TemplateView.as_view(template_name='docdoc_pages/clinic-detail.html'), name="docdoc_clinic_detail"),
+    url(r'^docdoc/hospital-detail/$', TemplateView.as_view(template_name='docdoc_pages/hospital-detail.html'), name="docdoc_hospital_detail"),
 
     # API
     url(r'^api/employee/$', views.get_employees),

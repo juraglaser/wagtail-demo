@@ -1,32 +1,57 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="new-medtour" lang="en">
+<html class="new-medtour" data-ng-app="docdocApp" lang="en">
 
 <head>
+
     <meta charset="utf-8" />
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
-    <meta content="With DocDoc, Asia's largest healthcare network, medical travel has never been easier. We help you find your clinics in asia." name="description" />
+    <meta content="With DocDoc, Asia's largest healthcare network, medical travel has never been easier. We help you visit Dr. Adeline Wong in Singapore for free." name="description" />
     <meta content="DocDoc" name="author" />
-    <meta content="noindex,follow" name="robots" />
-	
-    <title>Find a healthcare provider In Asia | Medical tourism information | DocDoc</title>
-	
+    <meta content="!" name="fragment" />
+    <script async="async" src="//cdn.optimizely.com/js/140809765.js"></script>
+    <meta content="index,follow" name="robots" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="@docdoc" name="twitter:site" />
+    <meta content="Get your Paediatrician procedure done with Dr. Adeline Wong." name="twitter:title" />
+    <meta content="DocDoc, Asia's largest healthcare marketplace, helps you get treatment with top Paediatricians and Paediatrics clinics in Singapore." name="twitter:description" />
+    <meta content="{% static 'docdoc_pages/images/social-tag-default.jpg' %}" name="twitter:image" />
+    <meta content="https://www.docdoc.com/doctors/dr-adeline-wong" name="twitter:url" />
+    <meta content="article" name="og:type" />
+    <meta content="DocDoc" name="og:site_name" />
+    <meta content="https://www.docdoc.com/doctors/dr-adeline-wong" name="og:url" />
+    <meta content="Get your Paediatrician procedure done with Dr. Adeline Wong." name="og:title" />
+    <meta content="DocDoc, Asia's largest healthcare marketplace, helps you get treatment with top Paediatricians and Paediatrics clinics in Singapore." name="og:description" />
+    <meta content="{% static 'docdoc_pages/images/social-tag-default.jpg' %}" name="og:image" />
+    <meta content="Get your Paediatrician procedure done with Dr. Adeline Wong." itemprop="name" />
+    <meta content="DocDoc, Asia's largest healthcare marketplace, helps you get treatment with top Paediatricians and Paediatrics clinics in Singapore." itemprop="description" />
+    <meta content="{% static 'docdoc_pages/images/social-tag-default.jpg' %}" itemprop="image" />
+
+    <title>Dr. Adeline Wong | Singapore | Medical tourism information | DocDoc</title>
+
     <link href="{% static 'docdoc_pages/images/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144" />
     <link href="{% static 'docdoc_pages/images/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114" />
     <link href="{% static 'docdoc_pages/images/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72" />
     <link href="{% static 'docdoc_pages/images/apple-touch-icon.png' %}" rel="apple-touch-icon" />
     <link href="{% static 'docdoc_pages/images/favicon.ico' %}" rel="shortcut icon" />
 
+    <link href="/doctors/dr-adeline-wong/booking?step=details" rel="prerender" />
+    <link href="/doctors/dr-adeline-wong/booking?step=details" rel="prefetch" />
+    <link href="/doctors/dr-adeline-wong/enquiry?step=details" rel="prerender" />
+    <link href="/doctors/dr-adeline-wong/enquiry?step=details" rel="prefetch" />
+
     <link href="{% static 'docdoc_pages/css/application_medtour2016.css' %}" media="screen" rel="stylesheet" />
     <!--[if lte IE 9]>
         <link href="{% static 'docdoc_pages/css/ie9fix.css' %}" media="screen" rel="stylesheet" />
 	    <script src="{% static 'docdoc_pages/js/classlist.js' %}"></script>
     <![endif]-->
-    <link href="https://www.docdoc.com/search" rel="canonical" />
-    <link href="https://www.docdoc.com/search" hreflang="en" rel="alternate" />
-    <link href="https://www.docdoc.com/id/search" hreflang="id" rel="alternate" />
+
+    <link href="https://www.docdoc.com/doctors/dr-adeline-wong" rel="canonical" />
+    <link href="https://www.docdoc.com/doctors/dr-adeline-wong" hreflang="en" rel="alternate" />
+    <link href="https://www.docdoc.com/id/doctors/dr-adeline-wong" hreflang="id" rel="alternate" />
+
     <meta content="authenticity_token" name="csrf-param" />
     <meta content="ICnZfC8g0VO8IA+fsb2O31QAiSnGDApKpCtPQTWpR4M=" name="csrf-token" />
 </head>
@@ -37,14 +62,14 @@
             <div class="header-top">
                 <div class="shell">
                     <div class="header-inner"><a class="logo" href="/docdoc/"><img alt="logo" data-src="{% static 'docdoc_pages/images/logo-header2x.png' %}" height="26" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="138" /></a>
-                        <p class="help">Need help finding care abroad?<span class="hide-desktop">Call us at: </span><a href="tel:+6566975300" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5300</span></a></p><button class="btn-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+                        <p class="help">Need help finding care abroad?<span class="hide-desktop">Call us at: </span><a href="tel:+6566975301" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5301</span></a></p><button class="btn-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
                         <nav class="nav-utilities">
                             <ul>
                                 <li class="has-subnav"><a href="javascript:void(0)">English</a>
                                     <div class="nav-dropdown nav-dropdown-lang">
                                         <ul>
                                             <li><a href="javascript:void(0)">English</a></li>
-                                            <li class="change-language" data-url="/medtour/change_language?language=Bahasa+%28Indonesia%29"><a href="/id/search" hreflang="id">Bahasa (Indonesia)</a></li>
+                                            <li class="change-language" data-url="/medtour/change_language?language=Bahasa+%28Indonesia%29"><a href="/id/doctors/dr-adeline-wong" hreflang="id">Bahasa (Indonesia)</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -275,143 +300,369 @@
                 </div>
             </div>
         </header>
-        {% verbatim %}
-        <script>
-            var hitTemplate =
-                '<div class="box-clinic">' +
-                '<div class="box-image"><a href="{{{medtour_profile_path}}}"><img src="{{search_thumb_img_url}}" /></a></div>' +
-                '<div class="box-content">' +
-                '<h5><a href="{{{medtour_profile_path}}}">{{{name}}}</a></h5>' +
-                '<h6 class="country">{{provider_type_en}} ' + "in" + ' {{city_country_name_en}}</h6>' +
-                '<p><strong>Language Spoken:</strong> {{languages}}</p>' +
-                '</div>' +
-                '<div class="box-actions">' +
-                '<span class="verified {{premium}}">Verified <i class="ico-verified"></i></span>' +
-                '<a href="{{medtour_profile_path}}" class="btn btn-primary">MORE DETAILS</a>' +
-                '</div>' +
-                '</div>';
-
-            var noResultsTemplate =
-                '<p>Sorry, we could not find any providers listed under ‘<strong>Providers</strong>’. We are adding more providers every day, please check back later or call us at <a href="tel:+6566975300" rel="nofollow"><span class="tracking-phone-num ">+65 6697 5300</span></a> for further assistance.</p>';
-
-            var statsTemplate = "{{#hasOneResult}}<span>1</span> result to choose from{{/hasOneResult}}" +
-                "{{#hasManyResults}}<span>{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}}</span> results to choose from{{/hasManyResults}}";
-
-            var seeMoreProcedureTemplate = "<a class='link-more'>See more procedures</a>";
-            var seeMoreSpecialityTemplate = "<a class='link-more'>See more specialties</a>";
-            var seeMoreBodyTemplate = "<a class='link-more'>See more body parts</a>";
-            var seeLessProcedureTemplate = "<a class='link-more'>See less procedures</a>";
-            var seeLessSpecialityTemplate = "<a class='link-more'>See less specialties</a>";
-            var seeLessBodyTemplate = "<a class='link-more'>See less body parts</a>";
-        </script>
-        {% endverbatim %}
-        <div class="main" id="search-result-page">
-            <section class="section-search" id="search-form">
+        <div class="main profile-page">
+            <section class="section-clinic" data-specialty="Paediatrics" data-type="doctor" id="doctor-profile">
                 <div class="shell">
                     <div class="section-inner">
-                        <div class="search">
-                            <form accept-charset="UTF-8" action="/query" method="post">
-                                <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ICnZfC8g0VO8IA+fsb2O31QAiSnGDApKpCtPQTWpR4M=" /></div>
-                                <div class="form-wrapper">
-                                    <div class="select-wrapper"><i class="ico-search"></i><select id="query_value" name="query_value"><option value="">- Choose your type of doctor -</option><option value="aesthetic-medicine-physicians">Aesthetic Medicine</option><option value="alternative-medicine-physicians">Alternative Medicine</option><option value="anaesthesiologists">Anaesthesiology</option><option value="cardiologists">Cardiology</option><option value="cardiothoracic-surgeons">Cardiothoracic Surgery</option><option value="chiropractors">Chiropractic</option><option value="dermatologists">Dermatology</option><option value="dietitians">Dietetics</option><option value="endocrinologists">Endocrinology</option><option value="endodontists">Endodontics</option><option value="endovascular-surgeons">Endovascular Surgery</option><option value="gastroenterologists">Gastroenterology</option><option value="general-dentists">General Dentistry</option><option value="general-practitioners">General Practice</option><option value="general-surgeons">General Surgery</option><option value="geriatricians">Geriatrics</option><option value="haematologists">Haematology</option><option value="hand-surgeons">Hand Surgery</option><option value="hepatologists">Hepatology</option><option value="infectious-disease-physicians">Infectious Disease</option><option value="internal-medicine-physicians">Internal Medicine</option><option value="nephrologists">Nephrology</option><option value="neurologists">Neurology</option><option value="neurosurgeons">Neurosurgery</option><option value="nutritionists">Nutrition</option><option value="obstetricians-gynaecologists">Obstetrics &amp; Gynaecology</option><option value="occupational-medicine-physicians">Occupational Medicine</option><option value="occupational-therapists">Occupational Therapy</option><option value="oncologists">Oncology</option><option value="ophthalmologists">Ophthalmology</option><option value="optometrists">Optometry</option><option value="oral-maxillofacial-surgeons">Oral &amp; Maxillofacial Surgery</option><option value="orthodontists">Orthodontics</option><option value="orthopaedic-surgeons">Orthopaedics</option><option value="osteopaths">Osteopathy</option><option value="otorhinolaryngologists">Otorhinolaryngology</option><option value="paediatric-surgeons">Paediatric Surgery</option><option value="paediatricians">Paediatrics</option><option value="paedodontists">Paedodontics</option><option value="pathologists">Pathology</option><option value="periodontists">Periodontics</option><option value="physiotherapists">Physiotherapy</option><option value="plastic-surgeons">Plastic Surgery</option><option value="podiatrists">Podiatry</option><option value="prosthodontists">Prosthodontics</option><option value="psychiatrists">Psychiatry</option><option value="psychologists">Psychology</option><option value="pulmonologists">Pulmonology</option><option value="radiologists">Radiology</option><option value="rehabilitation-medicine-physicians">Rehabilitation Medicine</option><option value="rheumatologists">Rheumatology</option><option value="speech-therapists">Speech Therapy</option><option value="sports-medicine-physicians">Sports Medicine</option><option value="traditional-chinese-medicine-physicians">Traditional Chinese Medicine</option><option value="urologists">Urology</option><option value="vascular-surgeons">Vascular Surgery</option></select></div>
-                                    <div class="select-wrapper"><select id="select-country" name="selected_country"><option value="">- Choose a country -</option><option value="SG">Singapore</option><option value="TH">Thailand</option><option value="PH">Philippines</option><option value="MY">Malaysia</option><option value="KR">South Korea</option><option value="IN">India</option><option value="HK">Hong Kong</option></select></div>
-                                    <div class="button-wrapper"><input class="search-btn btn btn-primary" id="search-form-btn" name="commit" type="submit" value="Search" /></div>
-                                    <div class="clearfix"></div>
+                        <header class="section-head">
+                            <div class="section-head-inner">
+                                <div class="scroll-group-head-list">
+                                    <div class="scroll-group-head active" href=".scroll-title-overview">Overview</div>
+                                    <div class="scroll-group-head" href=".scroll-title-physicians">Clinics</div>
+                                    <div class="scroll-group-head" href=".scroll-title-procedure">Procedures</div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-search-grid">
-                <div class="shell">
-                    <div class="section-inner">
-                        <aside class="section-sidebar">
-                            <div class="widgets">
-                                <div class="widget widget-filter">
-                                    <div class="widget-head"><a class="btn btn-white reset" href="#">Reset</a>
-                                        <h2>Filter by</h2><a class="btn btn-white btn-close-filter" href="#"> Done</a></div>
-                                    <div class="widget-body">
-                                        <div class="accordion accordion-filter">
-                                            <div class="accordion-section ng-hide hidden">
-                                                <div class="accordion-head">
-                                                    <h6>name</h6>
+                                <div class="profile-image"><img alt="Dr. Adeline Wong" itemprop="image" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/7782/t200x200.jpg" title="Dr. Adeline Wong" /></div>
+                                <div class="profile-info">
+                                    <h1><span>Dr. Adeline Wong</span><span class="verified-badge">Verified<i class="ico-verified"></i></span></h1>
+                                    <h6 class="country">Paediatrician in Singapore</h6>
+                                    <div class="practice-images hide-mobile">
+                                        <div class="pull-left"><a class="show-lightbox image-wrapper" data-index="0" href="#" title="Dr. Adeline Wong"><img alt="Dr. Adeline Wong" data-src="https://dd-prod-uploads.s3.amazonaws.com/DI1/8068/t100x100.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></a></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="section-body">
+                            <div class="section-content">
+                                <div class="scroll-wrapper">
+                                    <div class="scroll-wrapper-inner">
+                                        <div class="scroll-group-title scroll-title-overview">Overview</div>
+                                        <div class="scroll-group">
+                                            <div class="scroll-group-body">
+                                                <p>Dr. Wong graduated from the Royal College of Surgeons in Ireland and completed three years of advanced training in general paediatrics with National University Hospital, National University of Singapore. She is a Consultant Paediatrician with Paediatric Centres, Thomson Paediatric Centre.</p>
+
+                                                <p>Prior to coming on board with Thomson Paediatric Centre, Dr. Wong served as a consultant paediatrician at Raffles Medical Hospital for three years. Her working experience in paediatrics spans from paediatric cardiology to neonatal care and children’s emergencies. In the earlier stages of her career, Dr. Wong served as a house officer to various paediatric units in Kuching and Kuala Terrenganu.</p>
+
+                                                <p>Dr. Wong is married with two children, and is fluent in English, Mandarin and Malay.</p>
+                                                <div class="widget widget-nav">
+                                                    <div class="widget-head">
+                                                        <h6>Education</h6>
+                                                    </div>
+                                                    <div class="widget-body">
+                                                        <ul>
+                                                            <li itemprop="alumniOf">MB BCh BAO (NUI) 1993</li>
+                                                            <li itemprop="alumniOf">MRCP (Paed) (Ire) 2000</li>
+                                                            <li itemprop="alumniOf">FAMS (Paed) 2004</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                                <div class="accordion-body">
-                                                    <div class="input-group"><input class="form-control" id="q" type="text" /></div>
+                                                <div class="widget widget-nav">
+                                                    <div class="widget-head">
+                                                        <h6>Languages Spoken</h6>
+                                                    </div>
+                                                    <div class="widget-body">
+                                                        <ul>
+                                                            <li>Mandarin</li>
+                                                            <li>Malay</li>
+                                                            <li>English</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="widget widget-nav">
+                                                    <div class="widget-head">
+                                                        <h6>Insurance</h6>
+                                                    </div>
+                                                    <div class="widget-body">
+                                                        <ul>
+                                                            <li>AVIVA</li>
+                                                            <li>Aetna</li>
+                                                            <li>NTUC</li>
+                                                            <li>InterGlobal</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by provider</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="provider-types"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by location</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="countries"></ul>
+                                        </div>
+                                        <div class="scroll-group-title scroll-title-physicians">Clinics</div>
+                                        <div class="scroll-group scroll-group-physicians">
+                                            <div class="scroll-group-body">
+                                                <div class="physicians">
+                                                    <div class="physician">
+                                                        <div class="physicians-head"><a href="/clinics/sbcc-baby-child-clinic-bishan"><img alt="SBCC Baby &amp; Child Clinic (Bishan)" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/8044/t100x100.jpg" title="SBCC Baby &amp; Child Clinic (Bishan)" /></a>
+                                                            <h5 class="pull-left"><a href="/clinics/sbcc-baby-child-clinic-bishan">SBCC Baby &amp; Child Clinic (Bishan)</a><span class="verified">Verified<i class="ico-verified"></i></span><span>Paediatrician in Singapore</span></h5><a class="btn btn-secondary pull-right" href="/clinics/sbcc-baby-child-clinic-bishan">View full profile</a></div>
+                                                        <div class="physicians-body"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by specialty</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="specialties"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by procedure</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="procedures"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by body part</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="body_locations"></ul>
+                                        </div>
+                                        <div class="scroll-group-title scroll-title-procedure">Procedures</div>
+                                        <div class="scroll-group scroll-group-procedure">
+                                            <div class="scroll-group-body">
+                                                <h5>Paediatrics</h5>
+                                                <div class="accordion accordion-procedures">
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">1 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/1-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">12 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/12-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">15 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/15-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">18 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/18-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">2 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/2-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">24 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/24-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">3-7 Day Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/3-7-day-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">30 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/30-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">4 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/4-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">6 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/6-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">9 Month Well-Baby Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/9-month-well-baby-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Annual Pediatric Checkup</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/annual-pediatric-checkup/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">General Consultation</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/general-consultation/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Cerumen Removal</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-cerumen-removal/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Consultation</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-consultation/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Follow Up</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-follow-up/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Freezing of Warts</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-freezing-of-warts/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Joint Injection</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-joint-injection/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Nail Removal</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-nail-removal/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Second Opinion</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-second-opinion/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Skin Biopsy / Removal of Skin Lesion</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-skin-biopsy-removal-of-skin-lesion/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Sports Physical</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-sports-physical/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Travel Medicine Consultation</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-travel-medicine-consultation/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pediatric Vaccines</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pediatric-vaccines/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Pre-natal Fetal Follow Up</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/pre-natal-fetal-follow-up/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Prenatal Fetal Consultation</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/prenatal-fetal-consultation/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Sick Child Visit</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/doctors/dr-adeline-wong/sick-child-visit/enquiry?step=details" rel="nofollow">Contact Doctor</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="widget-actions">
-                                        <div class="ng-hide hidden" id="reset-filter-text">Reset filter</div>
-                                        <div id="clear-all"></div>
+                                </div>
+                            </div>
+                            <aside class="section-sidebar">
+                                <div class="widgets">
+                                    <div class="widget widget-book">
+                                        <div class="widget-body"><a class="medtour-enquiry-btn en btn btn-booking" href="/doctors/dr-adeline-wong/booking?step=details" rel="nofollow">Request Booking</a><a class="medtour-enquiry-btn en btn btn-enquiry" href="/doctors/dr-adeline-wong/enquiry?step=details" rel="nofollow">Free Enquiry</a></div>
+                                    </div>
+                                    <div class="widget widget-difference">
+                                        <div class="widget-body">
+                                            <div class="difference-links">
+                                                <h5>The DocDoc Difference</h5>
+                                                <ul class="difference-hover">
+                                                    <li>
+                                                        <a href="/difference/verified-doctors">
+                                                            <div class="img-wrapper"><img alt="Verified Doctors" data-src="{% static 'docdoc_pages/images/feature1.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p>Verified <br>Doctors</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/difference/guaranteed-best-price">
+                                                            <div class="img-wrapper"><img alt="Guaranteed Best Price" data-src="{% static 'docdoc_pages/images/feature2.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p>Guaranteed <br>Best Price</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/difference/asias-largest-provider-network">
+                                                            <div class="img-wrapper"><img alt="Asia’s Largest Physician Network" data-src="{% static 'docdoc_pages/images/feature3.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p class="no-break en">Asia’s Largest <br>Physician Network</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/difference/a-company-that-cares">
+                                                            <div class="img-wrapper"><img alt="A Company that Cares" data-src="{% static 'docdoc_pages/images/feature4.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p>A Company <br>that Cares</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </aside>
-                        <div class="section-content">
-                            <header class="section-head">
-                                <h2 id="search-title"> Providers in <span>Asia</span></h2><button class="btn btn-filter">Filter</button></header>
-                            <div class="section-body">
-                                <div class="loading block-ui">
-                                    <div class="loading-spinner"></div>
+                            </aside>
+                        </div>
+                        <div id="suggest-clinic">
+                            <div class="title">Related Clinics</div>
+                            <div class="horizon" id="clinic-list">
+                                <div class="clinic-content">
+                                    <div class="clinic-avatar pull-left"><a href="/clinics/dr-nada-s-paediatric-surgery-clinic" itemprop="significantLink"><img alt="Dr. Nada's Paediatric Surgery Clinic" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/5589/t100x100.jpg" title="Dr. Nada's Paediatric Surgery Clinic" /></a>
+                                        <div class="clinic-verify english"></div>
+                                    </div>
+                                    <div class="clinic-info pull-right">
+                                        <div class="name"><a href="/clinics/dr-nada-s-paediatric-surgery-clinic" itemprop="significantLink">Dr. Nada's Paediatric Surgery Clinic</a></div>
+                                        <div class="location">Kuala Lumpur, Malaysia</div>
+                                        <div id="specialities"><span class="bold">Specialities: </span>General Surgery, Paediatrics</div>
+                                        <div id="language"><span class="bold">Language Spoken: </span>English, Malay</div>
+                                    </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div id="hits"></div>
-                            </div>
-                            <div class="section-actions">
-                                <div class="paging" id="pagination"></div>
+                                <div class="clinic-content">
+                                    <div class="clinic-avatar pull-left"><a href="/clinics/juvekar-nursing-home" itemprop="significantLink"><img alt="Juvekar Nursing Home" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/6696/t100x100.jpg" title="Juvekar Nursing Home" /></a>
+                                        <div class="clinic-verify english"><span class="badge-container "><span class="badge verified has-tooltip" data-placement="bottom" data-toggle="tooltip" title="We've verified this clinic's information.">Verified</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="clinic-info pull-right">
+                                        <div class="name"><a href="/clinics/juvekar-nursing-home" itemprop="significantLink">Juvekar Nursing Home</a></div>
+                                        <div class="location">Mumbai, India</div>
+                                        <div id="specialities"><span class="bold">Specialities: </span>General Practice, Obstetrics &amp; Gynaecology</div>
+                                        <div id="language"><span class="bold">Language Spoken: </span>English</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clinic-content">
+                                    <div class="clinic-avatar pull-left"><a href="/clinics/kpj-tawakkal-specialist-hospital" itemprop="significantLink"><img alt="KPJ Tawakkal Specialist Hospital " src="https://dd-prod-uploads.s3.amazonaws.com/DI1/6482/t100x100.jpg" title="KPJ Tawakkal Specialist Hospital " /></a>
+                                        <div class="clinic-verify english"><span class="badge-container "><span class="badge verified has-tooltip" data-placement="bottom" data-toggle="tooltip" title="We've verified this clinic's information.">Verified</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="clinic-info pull-right">
+                                        <div class="name"><a href="/clinics/kpj-tawakkal-specialist-hospital" itemprop="significantLink">KPJ Tawakkal Specialist Hospital </a></div>
+                                        <div class="location">Kuala Lumpur, Malaysia</div>
+                                        <div id="specialities"><span class="bold">Specialities: </span>Cardiology, Cardiothoracic Surgery</div>
+                                        <div id="language"><span class="bold">Language Spoken: </span>English, Arabic, Japanese, Korean</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <div id="images-lightbox">
+                <div class="modal-header hidden"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h4>Dr. Adeline Wong</h4>
+                </div>
+                <div class="lightbox-carousel">
+                    <ul>
+                        <li class="lightbox-pic">
+                            <div class="picture"><img alt="Dr. Adeline Wong" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/8068/t600x600.jpg" /></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer"><span class="counter">1</span>/<span class="max-num">1</span></div>
+            </div>
+            <div id="bottom-sticky-bar">
+                <div id="suggest-content">Want to get a free price quote from this verified doctor?</div>
+                <div id="enquiry-button-link"><a class="medtour-enquiry-btn en blue-secondary-btn" href="/doctors/dr-adeline-wong/enquiry?step=details" rel="nofollow">ENQUIRE NOW</a></div>
+            </div>
         </div>
-        <div class="hidden ng-hide" id="params"></div>
-        <div class="hidden ng-hide" id="country-filter"></div>
-        <div class="hidden" id="specialty-filter"></div>
-        <div class="hidden" id="procedure-filter"></div>
-        <div class="hidden" id="body-filter"></div>
         <footer class="footer" id="footer">
             <div class="footer-top">
                 <div class="shell">
@@ -444,7 +695,7 @@
                         <ul class="list-footer">
                             <li class="hide-desktop">
                                 <h6 class="alt">For more information or to book an appointment, call us at</h6>
-                                <p class="phone"><a href="tel:+6566975300" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5300</span></a></p>
+                                <p class="phone"><a href="tel:+6566975301" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5301</span></a></p>
                             </li>
                             <li>
                                 <h6>About DocDoc</h6>
@@ -468,7 +719,7 @@
                             </li>
                             <li class="hide-mobile">
                                 <h6 class="alt">For more information or to book an appointment, call us at</h6>
-                                <p class="phone"><a href="tel:+6566975300" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5300</span></a></p>
+                                <p class="phone"><a href="tel:+6566975301" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5301</span></a></p>
                             </li>
                         </ul>
                         <div class="footer-bottom-bar">
@@ -588,18 +839,27 @@
             ]
         }
     </script>
-    <div class="ng-hide hidden" data-value="false" id="ga_custom_dimension"></div>
-</body>
-<script>
+    <script>
         window.dataTransfer = {};
         window.dataTransfer.country = "CZ";
-        window.dataTransfer.current_utm = "cz.direct.direct.direct.cz-en-none.none.none.www-docdoc-com-search.none.42";
+        window.dataTransfer.current_utm = "cz.direct.direct.direct.cz-en-none.none.none.www-docdoc-com-doctors-dr-adeline-wong.none.42";
         window.dataTransfer.is_layout2016 = true;
+        window.dataTransfer.object = {
+            "type": "Doctor",
+            "bookable": true,
+            "has_procedure": true
+        };
+        window.dataTransfer.clinics = [{
+            "name": "SBCC Baby \u0026 Child Clinic (Bishan)",
+            "id": 9525,
+            "practice_image_urls": ["https://dd-prod-uploads.s3.amazonaws.com/DI1/8068/t100x100.jpg"],
+            "practice_image_full_urls": ["https://dd-prod-uploads.s3.amazonaws.com/DI1/8068/t600x600.jpg"]
+        }];
 
         window.starOnUrl = '{% static "docdoc_pages/images/star-on.png" %}';
         window.starOffUrl = '{% static "docdoc_pages/images/star-off.png" %}';
         window.starHalfUrl = '{% static "docdoc_pages/images/star-half.png" %}';
-        window.SERVER_TIME_DELTA = new Date(1500374354000) - new Date();
+        window.SERVER_TIME_DELTA = new Date(1500387600000) - new Date();
         window.SERVER_TIME_ZONE_OFFSET = 28800000 + new Date().getTimezoneOffset() * 60 * 1000;
         window.railsEnv = 'production';
         window.langIso = 'en';
@@ -611,7 +871,7 @@
         window.isLoggedin = false;
         window.userEmail = '';
         window.delaconCid = '16273';
-        window.defaultPhoneNumber = '+65 6697 5300';
+        window.defaultPhoneNumber = '+65 6697 5301';
 
         function loadScript(src, callback) {
             var script = document.createElement('script');
@@ -637,7 +897,6 @@
 
         function loadAllJs() {
             head.load('{% static "docdoc_pages/js/i18n.js" %}');
-            head.load('{% static "docdoc_pages/js/algolia.js" %}');
             head.load('{% static "docdoc_pages/js/application_desktop.js" %}');
             head.load('{% static "docdoc_pages/js/application_medtour2016.js" %}');
         }
@@ -674,5 +933,6 @@
             return navigator.userAgent.match(regExp);
         }
     </script>
+</body>
 
 </html>

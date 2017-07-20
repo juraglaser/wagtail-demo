@@ -1,0 +1,920 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="new-medtour" data-ng-app="docdocApp" lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
+    <meta content="With DocDoc, Asia's largest healthcare network, medical travel has never been easier. We help you visit VIDASKIN Medical and Aesthetics Clinic in Singapore for free." name="description" />
+    <meta content="DocDoc" name="author" />
+    <meta content="!" name="fragment" />
+    <script async="async" src="//cdn.optimizely.com/js/140809765.js"></script>
+    <meta content="index,follow" name="robots" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="@docdoc" name="twitter:site" />
+    <meta content="Get your Aesthetic Medicine Physician procedure done at VIDASKIN Medical and Aesthetics Clinic." name="twitter:title" />
+    <meta content="With DocDoc, Asia's largest healthcare network, medical travel has never been easier. We help you visit VIDASKIN Medical and Aesthetics Clinic in Singapore for free." name="twitter:description" />
+    <meta content="{% static 'docdoc_pages/images/social-tag-default.jpg' %}" name="twitter:image" />
+    <meta content="https://www.docdoc.com/clinics/vidaskin-medical-and-aesthetics-clinic" name="twitter:url" />
+    <meta content="article" name="og:type" />
+    <meta content="DocDoc" name="og:site_name" />
+    <meta content="https://www.docdoc.com/clinics/vidaskin-medical-and-aesthetics-clinic" name="og:url" />
+    <meta content="Get your Aesthetic Medicine Physician procedure done at VIDASKIN Medical and Aesthetics Clinic." name="og:title" />
+    <meta content="With DocDoc, Asia's largest healthcare network, medical travel has never been easier. We help you visit VIDASKIN Medical and Aesthetics Clinic in Singapore for free." name="og:description" />
+    <meta content="{% static 'docdoc_pages/images/social-tag-default.jpg' %}" name="og:image" />
+    <meta content="Get your Aesthetic Medicine Physician procedure done at VIDASKIN Medical and Aesthetics Clinic." itemprop="name" />
+    <meta content="With DocDoc, Asia's largest healthcare network, medical travel has never been easier. We help you visit VIDASKIN Medical and Aesthetics Clinic in Singapore for free." itemprop="description" />
+    <meta content="{% static 'docdoc_pages/images/social-tag-default.jpg' %}" itemprop="image" />
+
+    <title>VIDASKIN Medical and Aesthetics Clinic | Singapore | DocDoc</title>
+
+    <link href="{% static 'docdoc_pages/images/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144" />
+    <link href="{% static 'docdoc_pages/images/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114" />
+    <link href="{% static 'docdoc_pages/images/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72" />
+    <link href="{% static 'docdoc_pages/images/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+    <link href="{% static 'docdoc_pages/images/favicon.ico' %}" rel="shortcut icon" />
+
+    <link href="/clinics/vidaskin-medical-and-aesthetics-clinic/booking?step=details" rel="prerender" />
+    <link href="/clinics/vidaskin-medical-and-aesthetics-clinic/booking?step=details" rel="prefetch" />
+    <link href="/clinics/vidaskin-medical-and-aesthetics-clinic/enquiry?step=details" rel="prerender" />
+    <link href="/clinics/vidaskin-medical-and-aesthetics-clinic/enquiry?step=details" rel="prefetch" />
+
+    <link href="{% static 'docdoc_pages/css/application_medtour2016.css' %}" media="screen" rel="stylesheet" />
+    <!--[if lte IE 9]>
+        <link href="{% static 'docdoc_pages/css/ie9fix.css' %}" media="screen" rel="stylesheet" />
+	    <script src="{% static 'docdoc_pages/js/classlist.js' %}"></script>
+    <![endif]-->
+
+    <link href="https://www.docdoc.com/clinics/vidaskin-medical-and-aesthetics-clinic" rel="canonical" />
+    <link href="https://www.docdoc.com/clinics/vidaskin-medical-and-aesthetics-clinic" hreflang="en" rel="alternate" />
+    <link href="https://www.docdoc.com/id/clinics/vidaskin-medical-and-aesthetics-clinic" hreflang="id" rel="alternate" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="zOph8QJpU9ov5raAeYBZ1MwbucV+IDc0oByNlvZ1vIs=" name="csrf-token" />
+</head>
+
+<body class="app-body new-medtour en" data-country_code="CZ">
+    <div class="wrapper wrapper-inner-pages small-padding">
+        <header class="header" ng-controller="AuthController" ng-init="init()">
+            <div class="header-top">
+                <div class="shell">
+                    <div class="header-inner"><a class="logo" href="/docdoc/"><img alt="logo" data-src="{% static 'docdoc_pages/images/logo-header2x.png' %}" height="26" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="138" /></a>
+                        <p class="help">Need help finding care abroad?<span class="hide-desktop">Call us at: </span><a href="tel:+6566975301" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5301</span></a></p><button class="btn-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+                        <nav class="nav-utilities">
+                            <ul>
+                                <li class="has-subnav"><a href="javascript:void(0)">English</a>
+                                    <div class="nav-dropdown nav-dropdown-lang">
+                                        <ul>
+                                            <li><a href="javascript:void(0)">English</a></li>
+                                            <li class="change-language" data-url="/medtour/change_language?language=Bahasa+%28Indonesia%29"><a href="/id/clinics/vidaskin-medical-and-aesthetics-clinic" hreflang="id">Bahasa (Indonesia)</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a class="box-show" href="#login">Login</a></li>
+                            </ul>
+                        </nav>
+                        <div class="box-login menu-box">
+                            <div class="box-inner">
+                                <div class="form form-login">
+                                    <form name="login_form" novalidate="novalidate">
+                                        <div class="form-head">
+                                            <h4>Welcome Back</h4>
+                                        </div>
+                                        <div class="form-body">
+                                            <div class="form-row"><label class="form-label hidden" for="field-login-email-address"> Email Address</label>
+                                                <div class="form-controls"><input auto-fillable-field="auto-fillable-field" class="field" id="field-login-email-address" name="uEmail" placeholder="Email Address" required="required" type="email" />
+                                                    <div class="notice field-notice">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row"><label class="form-label hidden" for="field-login-password"> Password</label>
+                                                <div class="form-controls"><input auto-fillable-field="auto-fillable-field" class="field" id="field-login-password" name="uPassword" placeholder="Please enter 6 characters" required="required" type="password" />
+                                                    <div class="notice field-notice">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                    <div class="notice password-notice">
+                                                        <div class="message">Wrong email or password</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions"><a class="reset-pass box-show" href="#forgot">Forgot your password?</a><button class="btn btn-blue" id="login-submit" type="submit">Login</button>
+                                            <p>I don’t have an account.<a class="link-register box-show" href="#register">Sign Up</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-forgot menu-box">
+                            <div class="box-inner">
+                                <div class="form form-login">
+                                    <form id="password-recovery-form" name="password_recovery_form" novalidate="novalidate">
+                                        <div class="form-head">
+                                            <h4>Request your password</h4>
+                                        </div>
+                                        <div class="form-body">
+                                            <div class="form-row"><label class="form-label hidden" for="field-login-email-address"> Email Address</label>
+                                                <div class="form-controls"><input class="field" id="restore-form-user_email" name="uEmail" placeholder="Email Address" required="reqired" type="email" />
+                                                    <div class="notice field-notice cannot-empty">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                    <div class="notice field-notice email-invalid">
+                                                        <div class="message">Incorrect email</div>
+                                                    </div>
+                                                    <div class="notice field-notice email-notice">
+                                                        <div class="message">Incorrect email</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions"><button class="btn btn-blue" disabled="true" id="forgot-password-submit" type="submit">Resend</button>
+                                            <p>I don’t have an account.<a class="link-register box-show" href="#register">Sign Up</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-thanks menu-box">
+                            <div class="box-inner">
+                                <h2>Thank You<span>for signing up!</span></h2>
+                            </div>
+                        </div>
+                        <div class="box-register menu-box">
+                            <div class="box-inner">
+                                <div class="form form-register">
+                                    <form name="sign_up_form" novalidate="novalidate">
+                                        <div class="form-head">
+                                            <h4>Welcome to DocDoc</h4>
+                                        </div>
+                                        <div class="form-body">
+                                            <div class="form-row">
+                                                <div class="form-controls"><input auto-fillable-field="auto-fillable-field" class="field" id="field-reg-given-name" name="uFirstName" placeholder="Given Name" required="required" type="text" />
+                                                    <div class="notice field-notice cannot-empty">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-controls"><input auto-fillable-field="auto-fillable-field" class="field" id="field-reg-family-name" name="uLastName" placeholder="Family Name" required="required" type="text" />
+                                                    <div class="notice field-notice cannot-empty">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-controls"><input auto-fillable-field="auto-fillable-field" class="field" id="field-reg-email" name="uEmail" placeholder="Email Address" required="required" type="email" />
+                                                    <div class="notice field-notice cannot-empty">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                    <div class="notice field-notice incorrect-email">
+                                                        <div class="message">Incorrect email</div>
+                                                    </div>
+                                                    <div class="notice field-notice email-taken">
+                                                        <div class="message">Email already taken</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-controls"><input class="field" id="field-reg-password" name="uPassword" placeholder="Password (min. 6 characters)" required="required" type="password" />
+                                                    <div class="notice field-notice cannot-empty">
+                                                        <div class="message">You can't leave this empty</div>
+                                                    </div>
+                                                    <div class="notice field-notice incorrect-password">
+                                                        <div class="message">Password must be 6 characters or more</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <p>By signing up you agree to our terms</p><button class="btn btn-blue" disabled="true" id="register-submit" type="submit">Sign Up</button>
+                                            <p>Already have an account?<a class="link-login box-show" href="#login">Login</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom hide-desktop">
+                <div class="shell">
+                    <div class="header-inner">
+                        <nav class="nav">
+                            <ul>
+                                <li class="nav-item-consider"><a href="javascript:void(0)">Consider</a>
+                                    <div class="nav-dropdown-mega">
+                                        <div class="shell">
+                                            <div class="nav-dropdown-inner">
+                                                <div class="row">
+                                                    <div class="col col-1of2">
+                                                        <ul>
+                                                            <li><a href="/consider/what-is-medical-tourism">What is medical tourism</a></li>
+                                                            <li><a href="/consider/what-are-the-risks">What are the risks</a></li>
+                                                            <li><a href="/consider/why-docdoc">Why DocDoc</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col col-1of2">
+                                                        <blockquote class="header-quote"><i class="ico-quote-small"></i>
+                                                            <p>"DocDoc helped me find the right neurologist for my mother. The comprehensive information <br> available online was helpful but the big difference for me was the free conversation I had <br> with the lovely DocDoc doctor who ensured I found the right doctor for my situation. <br> Thanks DocDoc! Well done!"
+                                                            </p><cite>Jean Fung</cite></blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item-discover"><a href="javascript:void(0)">Discover</a>
+                                    <div class="nav-dropdown-mega">
+                                        <div class="shell">
+                                            <div class="nav-dropdown-inner">
+                                                <div class="row">
+                                                    <div class="col col-1of2">
+                                                        <ul>
+                                                            <li><a href="/discover/our-process">Our process</a></li>
+                                                            <li><a href="/info/directory">Learn about a condition or specialty</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col col-1of2">
+                                                        <blockquote class="header-quote"><i class="ico-quote-small"></i>
+                                                            <p>"I was amazed at how much information the team at DocDoc had collected at their disposal <br> to help me find the right doctor for my family. They saved me hundreds of hours of time and also ensured I got the best price possible for my selected doctor."
+                                                            </p><cite>Sheila Nuranata</cite></blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item-engage"><a href="javascript:void(0)">Engage</a>
+                                    <div class="nav-dropdown-mega">
+                                        <div class="shell">
+                                            <div class="nav-dropdown-inner">
+                                                <div class="row">
+                                                    <div class="col col-1of2">
+                                                        <blockquote class="header-quote"><i class="ico-quote-small"></i>
+                                                            <p>"DocDoc knows who to go to for particular procedure in the region. <br> More than this, they took care of me like I was part of their family."
+                                                            </p><cite>So Young Kang</cite></blockquote>
+                                                    </div>
+                                                    <div class="col col-1of2">
+                                                        <ul>
+                                                            <li><a href="/engage/search-for-provider">Search for provider</a></li>
+                                                            <li><a href="/about/contact-us">Talk with a medical tourism professional now</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item-about"><a href="javascript:void(0)">About DocDoc</a>
+                                    <div class="nav-dropdown-mega">
+                                        <div class="shell">
+                                            <div class="nav-dropdown-inner">
+                                                <div class="row">
+                                                    <div class="col col-1of2">
+                                                        <blockquote class="header-quote"><i class="ico-quote-small"></i>
+                                                            <p>"I trust DocDoc. The people who work there care. They were a powerful <br> advocate for me in finding the right doctor."
+                                                            </p><cite>Niklas Wiklander</cite></blockquote>
+                                                    </div>
+                                                    <div class="col col-1of2">
+                                                        <ul class="alt">
+                                                            <li><a href="/about/company-overview">Company overview</a></li>
+                                                            <li><a href="/about/our-team">Our team</a></li>
+                                                            <li><a href="/about/board-and-investors">Board and investors</a></li>
+                                                            <li><a href="/about/careers">Careers</a></li>
+                                                            <li><a href="/about/press">Press</a></li>
+                                                            <li><a href="/about/contact-us">Contact us</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main profile-page">
+            <section class="section-clinic" data-specialty="Aesthetic Medicine Physicians" data-type="clinic">
+                <div class="shell">
+                    <div class="section-inner">
+                        <header class="section-head">
+                            <div class="section-head-inner">
+                                <div class="scroll-group-head-list">
+                                    <div class="scroll-group-head" href=".scroll-title-overview">Overview</div>
+                                    <div class="scroll-group-head" href=".scroll-title-physicians">Physician</div>
+                                    <div class="scroll-group-head" href=".scroll-title-procedure">Procedures</div>
+                                </div>
+                                <h1>VIDASKIN Medical and Aesthetics Clinic</h1>
+                                <h6 class="country">Singapore</h6>
+                            </div>
+                        </header>
+                        <div class="section-body">
+                            <div class="slider profile-slider">
+                                <div class="slides owl-carousel">
+                                    <div class="slide"><img alt="VIDASKIN Medical and Aesthetics Clinic" itemprop="image" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15190/t600x600.jpg" /></div>
+                                    <div class="slide"><img alt="VIDASKIN Medical and Aesthetics Clinic" itemprop="image" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15191/t600x600.jpg" /></div>
+                                    <div class="slide"><img alt="VIDASKIN Medical and Aesthetics Clinic" itemprop="image" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15192/t600x600.jpg" /></div>
+                                    <div class="slide"><img alt="VIDASKIN Medical and Aesthetics Clinic" itemprop="image" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15193/t600x600.jpg" /></div>
+                                    <div class="slide"><img alt="VIDASKIN Medical and Aesthetics Clinic" itemprop="image" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15194/t600x600.jpg" /></div>
+                                    <div class="slide"><img alt="VIDASKIN Medical and Aesthetics Clinic" itemprop="image" original="1" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15195/t600x600.jpg" /></div>
+                                </div>
+                            </div>
+                            <aside class="section-sidebar">
+                                <div class="widgets">
+                                    <div class="widget widget-book">
+                                        <div class="widget-body"><a class="medtour-enquiry-btn en btn btn-booking" href="/clinics/vidaskin-medical-and-aesthetics-clinic/booking?step=details" rel="nofollow">Request Booking</a><a class="medtour-enquiry-btn en btn btn-enquiry" href="/clinics/vidaskin-medical-and-aesthetics-clinic/enquiry?step=details" rel="nofollow">Free Enquiry</a></div>
+                                    </div>
+                                    <div class="widget widget-difference">
+                                        <div class="widget-body">
+                                            <div class="difference-links">
+                                                <h5>The DocDoc Difference</h5>
+                                                <ul class="difference-hover">
+                                                    <li>
+                                                        <a href="/difference/verified-doctors">
+                                                            <div class="img-wrapper"><img alt="Verified Doctors" data-src="{% static 'docdoc_pages/images/feature1.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p>Verified <br>Doctors</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/difference/guaranteed-best-price">
+                                                            <div class="img-wrapper"><img alt="Guaranteed Best Price" data-src="{% static 'docdoc_pages/images/feature2.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p>Guaranteed <br>Best Price</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/difference/asias-largest-provider-network">
+                                                            <div class="img-wrapper"><img alt="Asia’s Largest Physician Network" data-src="{% static 'docdoc_pages/images/feature3.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p class="no-break en">Asia’s Largest <br>Physician Network</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/difference/a-company-that-cares">
+                                                            <div class="img-wrapper"><img alt="A Company that Cares" data-src="{% static 'docdoc_pages/images/feature4.png' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="52" /></div>
+                                                            <p>A Company <br>that Cares</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            <div class="section-content">
+                                <div class="scroll-wrapper">
+                                    <div class="scroll-wrapper-inner">
+                                        <div class="scroll-group-title scroll-title-overview">Overview</div>
+                                        <div class="scroll-group scroll-group-overview">
+                                            <div class="scroll-group-body">
+                                                <p>VIDASKIN Medical and Aesthetics Clinic is conveniently located at Ngee Ann City (Tower B) on Orchard Road in Singapore. It offers a comprehensive range of aesthetic treatments for the face, hair, skin, body, and hands using advanced technology, including modern laser devices, and modern facilities.</p>
+
+                                                <p>The clinic is the private practice of Dr. Vicki Leong, an Australia, United Kingdom, and Singapore-trained medical aesthetic practitioner. She graduated from the University of Melbourne and completed her Diploma of Family Medicine from the National University of Singapore. With a keen interest in aesthetic medicine, she also pursued her Postgraduate Diploma in Practical Dermatology from Cardiff University (United Kingdom).</p>
+
+                                                <p>Dr. Vicki is the appointed regional trainer for EnerJet™, a nonsurgical face lifting, skin regeneration, and acne scar repair procedure.</p>
+                                                <div class="widget widget-nav">
+                                                    <div class="widget-head">
+                                                        <h6>Languages Spoken</h6>
+                                                    </div>
+                                                    <div class="widget-body">
+                                                        <ul>
+                                                            <li>English</li>
+                                                            <li>Chinese</li>
+                                                            <li>Cantonese</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-group-title scroll-title-physicians">Physician</div>
+                                        <div class="scroll-group scroll-group-physicians">
+                                            <div class="scroll-group-body">
+                                                <div class="physicians">
+                                                    <div class="physician">
+                                                        <div class="physicians-head"><a href="/doctors/dr-vicki-leong"><img alt="Dr. Vicki Leong" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/15196/t100x100.jpg" title="Dr. Vicki Leong" /></a>
+                                                            <h5 class="pull-left"><a href="/doctors/dr-vicki-leong">Dr. Vicki Leong</a><span class="verified">Verified<i class="ico-verified"></i></span><span>Aesthetic Medicine Physician in Singapore</span></h5><a class="btn btn-secondary pull-right" href="/doctors/dr-vicki-leong">View full profile</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="physicians-body">
+                                                            <p>Dr. Vicki Leong is the founder and medical director of VIDASKIN Medical and Aesthetics Clinic. She completed her Graduate Diploma in Family Medicine at the National University of Singapore and Postgraduate Diploma in Practical <a href="http://www.docdoc.com/info/specialty/dermatologists">Dermatology</a> at Cardiff University in the United Kingdom. She now specialises in aesthetic medicine offering a range of nonsurgical treatments such as advanced skin care, Botox, thread lift, filler injections, and laser treatments. She is the appointed regional trainer for EnerJet™, a non-surgical face lifting, skin regeneration, and acne scar repair.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-group-title scroll-title-procedure">Procedures</div>
+                                        <div class="scroll-group scroll-group-procedure">
+                                            <div class="scroll-group-body">
+                                                <h5>Aesthetic Medicine</h5>
+                                                <div class="accordion accordion-procedures">
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Botox Injection (Per Unit)</h5>
+                                                            <div class="price pull-right en">est. € 10</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/botox-injection-per-unit/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Botox: Masseter (Jaw Slimming)</h5>
+                                                            <div class="price pull-right en">est. € 380</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/botox-masseter-jaw-slimming/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">CO2 Fractional Laser</h5>
+                                                            <div class="price pull-right en">est. € 380</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/co2-fractional-laser/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Carbon Laser Peel</h5>
+                                                            <div class="price pull-right en">est. € 222</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/carbon-laser-peel/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Coolglide Vascular Laser</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/coolglide-vascular-laser/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Cryo Fat Buster</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/cryo-fat-buster/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Cutera Laser Genesis</h5>
+                                                            <div class="price pull-right en">est. € 222</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/cutera-laser-genesis/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Cutera Limelight Therapy</h5>
+                                                            <div class="price pull-right en">est. € 222</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/cutera-limelight-therapy/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Dermalift</h5>
+                                                            <div class="price pull-right en">est. € 380</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/dermalift/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">EnerJet Needleless Acne Scar Treatment</h5>
+                                                            <div class="price pull-right en">est. € 951</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/enerjet-needleless-acne-scar-treatment/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">EnerJet Needleless Face Lifting Treatment</h5>
+                                                            <div class="price pull-right en">est. € 951</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/enerjet-needleless-face-lifting-treatment/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Filler Injections</h5>
+                                                            <div class="price pull-right en">est. € 444</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/filler-injections/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Keloid Reduction</h5>
+                                                            <div class="price pull-right en">est. € 63</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/keloid-reduction/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">LaseMD Silky Skin Treatment</h5>
+                                                            <div class="price pull-right en">est. € 253</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/lasemd-silky-skin-treatment/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">LaseMD Skin Perfecting Laser</h5>
+                                                            <div class="price pull-right en">est. € 285</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/lasemd-skin-perfecting-laser/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">LaseMD Thullium Acne Scar Treatment</h5>
+                                                            <div class="price pull-right en">est. € 285</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/lasemd-thullium-acne-scar-treatment/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Laser Permanent Hair Removal</h5>
+                                                            <div class="price pull-right en">est. € 126</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/laser-permanent-hair-removal/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Permanent IPL Hair Reduction</h5>
+                                                            <div class="price pull-right en">est. € 95</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/permanent-ipl-hair-reduction/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Q-Switched ND Yag Laser Treatment</h5>
+                                                            <div class="price pull-right en">est. € 222</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/q-switched-nd-yag-laser-treatment/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Radiocautery</h5>
+                                                            <div class="price pull-right en">est. € 95</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/radiocautery/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Restylane Skin Boosters</h5>
+                                                            <div class="price pull-right en">est. € 507</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/restylane-skin-boosters/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">TCA Cross Scar Therapy</h5>
+                                                            <div class="price pull-right en">est. € 50</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/tca-cross-scar-therapy/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Total Body Care</h5><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/total-body-care/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">Under Eye Laser Pigment Reduction</h5>
+                                                            <div class="price pull-right en">est. € 158</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/under-eye-laser-pigment-reduction/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">VIDASKIN Signature Trinity Facetherapy</h5>
+                                                            <div class="price pull-right en">est. € 349</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/vidaskin-signature-trinity-facetherapy/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">VIDASKIN Total Rejuvenation</h5>
+                                                            <div class="price pull-right en">est. € 349</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/vidaskin-total-rejuvenation/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-section">
+                                                        <div class="accordion-head no-description">
+                                                            <h5 class="pull-left en">eMatrix</h5>
+                                                            <div class="price pull-right en">est. € 380</div><a class="medtour-enquiry-btn en btn btn-blue pull-right" href="/clinics/vidaskin-medical-and-aesthetics-clinic/ematrix/enquiry?step=details" rel="nofollow">Contact Clinic</a>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="suggest-clinic">
+                            <div class="title">Related Clinics</div>
+                            <div class="horizon" id="clinic-list">
+                                <div class="clinic-content">
+                                    <div class="clinic-avatar pull-left"><a href="/clinics/absmediq-wellness-center" itemprop="significantLink"><img alt="ABSMEDiQ Wellness Center" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/6374/t100x100.jpg" title="ABSMEDiQ Wellness Center" /></a>
+                                        <div class="clinic-verify english"><span class="badge-container "><span class="badge verified has-tooltip" data-placement="bottom" data-toggle="tooltip" title="We've verified this clinic's information.">Verified</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="clinic-info pull-right">
+                                        <div class="name"><a href="/clinics/absmediq-wellness-center" itemprop="significantLink">ABSMEDiQ Wellness Center</a></div>
+                                        <div class="location">Bangkok, Thailand</div>
+                                        <div id="specialities"><span class="bold">Specialities: </span>Aesthetic Medicine, Nutrition</div>
+                                        <div id="language"><span class="bold">Language Spoken: </span>English, Thai</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clinic-content">
+                                    <div class="clinic-avatar pull-left"><a href="/clinics/absolute-zero" itemprop="significantLink"><img alt="Absolute Zero" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/14489/t100x100.jpg" title="Absolute Zero" /></a>
+                                        <div class="clinic-verify english"></div>
+                                    </div>
+                                    <div class="clinic-info pull-right">
+                                        <div class="name"><a href="/clinics/absolute-zero" itemprop="significantLink">Absolute Zero</a></div>
+                                        <div class="location">Singapore</div>
+                                        <div id="specialities"><span class="bold">Specialities: </span>Aesthetic Medicine</div>
+                                        <div id="language"><span class="bold">Language Spoken: </span>English, Mandarin</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clinic-content">
+                                    <div class="clinic-avatar pull-left"><a href="/clinics/aessence-clinic" itemprop="significantLink"><img alt="Aessence Clinic" src="https://dd-prod-uploads.s3.amazonaws.com/DI1/14323/t100x100.jpg" title="Aessence Clinic" /></a>
+                                        <div class="clinic-verify english"><span class="badge-container "><span class="badge verified has-tooltip" data-placement="bottom" data-toggle="tooltip" title="We've verified this clinic's information.">Verified</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="clinic-info pull-right">
+                                        <div class="name"><a href="/clinics/aessence-clinic" itemprop="significantLink">Aessence Clinic</a></div>
+                                        <div class="location">Petaling Jaya, Malaysia</div>
+                                        <div id="specialities"><span class="bold">Specialities: </span>Aesthetic Medicine</div>
+                                        <div id="language"><span class="bold">Language Spoken: </span>English, Mandarin, Malay, Hakka</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="bottom-sticky-bar">
+                <div id="suggest-content">Want to get a free price quote from this verified clinic?</div>
+                <div id="enquiry-button-link"><a class="medtour-enquiry-btn en blue-secondary-btn" href="/clinics/vidaskin-medical-and-aesthetics-clinic/enquiry?step=details" rel="nofollow">ENQUIRE NOW</a></div>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <div class="footer-top">
+                <div class="shell">
+                    <div class="footer-inner">
+                        <h6>Our Corporate Locations</h6>
+                        <ul class="list-locations">
+                            <li><img alt="Img location" data-src="https://cdn-0.docdoc.com/assets/medtour2016/temp/img-location-3a0d0f6d0dad11ae6007c6ff4265a2c2.png" height="98" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="213" />
+                                <h6>Jakarta Office</h6>
+                                <p>Menara DEA Tower 2,<br />10th FloorJl. Mega Kuningan Barat Kav. E4 No. 1 Kuningan TimurJakarta Selatan, Indonesia 12950</p>
+                            </li>
+                            <li><img alt="Img location2" data-src="https://cdn-0.docdoc.com/assets/medtour2016/temp/img-location2-cb564051926c97e9fa0d83937dd26a0d.png" height="99" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="214" />
+                                <h6>Singapore Office</h6>
+                                <p>64B Boat Quay,<br />Singapore 049852</p>
+                            </li>
+                            <li><img alt="Img location3" data-src="https://cdn-0.docdoc.com/assets/medtour2016/temp/img-location3-f85255e888968ee07e2d86383dc97e3d.png" height="98" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="213" />
+                                <h6>Vietnam Office</h6>
+                                <p>2 D4 Street,<br />Tan Hung Ward, District 7,<br />Ho Chi Minh City</p>
+                            </li>
+                            <li><img alt="Img location4" data-src="https://cdn-2.docdoc.com/assets/medtour2016/temp/img-location4-976e53e33664c332bfb71a79f9ed8525.png" height="99" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="215" />
+                                <h6>Philippines Office</h6>
+                                <p>Unit 23M The Manhattan Parkway Tower 2,<br />Aurora Blvd. & Gen. Malvar Sts.,<br />Brgy. Socorro, Cubao, Quezon City<br />Philippines</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="shell">
+                    <div class="footer-inner">
+                        <ul class="list-footer">
+                            <li class="hide-desktop">
+                                <h6 class="alt">For more information or to book an appointment, call us at</h6>
+                                <p class="phone"><a href="tel:+6566975301" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5301</span></a></p>
+                            </li>
+                            <li>
+                                <h6>About DocDoc</h6>
+                                <ul>
+                                    <li><a href="/about/company-overview">Company overview</a></li>
+                                    <li><a href="/about/our-team">Our team</a></li>
+                                    <li><a href="/about/board-and-investors">Board and investors</a></li>
+                                    <li><a href="/about/careers">Careers</a></li>
+                                    <li><a href="/about/press">Press</a></li>
+                                    <li><a href="/about/contact-us">Contact us</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Medical Information</h6>
+                                <ul>
+                                    <li class="medtour-link"><a href="/info/specialty">Specialties</a></li>
+                                    <li class="medtour-link"><a href="/info/procedure">Procedures</a></li>
+                                    <li class="medtour-link"><a href="/info/condition">Conditions</a></li>
+                                    <li class="medtour-link"><a href="/info/body">Body parts</a></li>
+                                </ul>
+                            </li>
+                            <li class="hide-mobile">
+                                <h6 class="alt">For more information or to book an appointment, call us at</h6>
+                                <p class="phone"><a href="tel:+6566975301" rel="nofollow"><span class="tracking-phone-num tel medtour">+65 6697 5301</span></a></p>
+                            </li>
+                        </ul>
+                        <div class="footer-bottom-bar">
+                            <p class="copyright">&copy; 2016 DocDoc Pte Ltd.</p>
+                            <nav class="nav-footer">
+                                <ul>
+                                    <li><a href="/pages/terms_privacy" rel="nofollow">Terms and conditions</a></li>
+                                    <li><a href="/pages/terms_privacy#privacy" rel="nofollow">Privacy</a></li>
+                                </ul>
+                            </nav>
+                            <div class="socials">
+                                <ul>
+                                    <li><a class="link-share" href="https://www.facebook.com/sharer/sharer.php?u=https://www.docdoc.com/" target="_blank"><i class="ico-facebook"></i></a></li>
+                                    <li><a class="link-share" href="https://twitter.com/home?status=https://www.docdoc.com/" target="_blank"><i class="ico-twitter"></i></a></li>
+                                    <li><a class="link-share" href="https://plus.google.com/share?url=https://www.docdoc.com/" target="_blank"><i class="ico-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar">
+                <div class="footer-bar-title">
+                    <div class="shell">
+                        <h6>Discover Medical Tourism on DocDoc</h6>
+                    </div>
+                </div>
+                <div class="footer-bar-content" style="display:block">
+                    <div class="shell">
+                        <ul>
+                            <li>
+                                <div class="footer-nav">
+                                    <h6>Search by country</h6>
+                                    <ul>
+                                        <li><a href="/search/singapore">Singapore</a></li>
+                                        <li><a href="/search/malaysia">Malaysia</a></li>
+                                        <li><a href="/search/thailand">Thailand</a></li>
+                                        <li><a href="/search/india">India</a></li>
+                                        <li><a href="/search/philippines">Philippines</a></li>
+                                        <li><a href="/search/south-korea">South Korea</a></li>
+                                        <li><a href="/search/hong-kong">Hong Kong</a></li>
+                                    </ul><a class="link-more" href="/countries/directory" rel="nofollow">See more ...</a></div>
+                            </li>
+                            <li>
+                                <div class="footer-nav">
+                                    <h6>Providers by procedure</h6>
+                                    <ul>
+                                        <li class="seo-title"><a class="" href="/search/first-consultation" title="First Consultation ">First Consultation </a></li>
+                                        <li class="seo-title"><a class="" href="/search/consultation" title="Consultation">Consultation</a></li>
+                                        <li class="seo-title"><a class="" href="/search/medical-report" title="Medical Report">Medical Report</a></li>
+                                        <li class="seo-title"><a class="" href="/search/second-consultation" title="Second Consultation">Second Consultation</a></li>
+                                        <li class="seo-title"><a class="" href="/search/ward-consultation" title="Ward Consultation">Ward Consultation</a></li>
+                                        <li class="seo-title"><a class="" href="/search/local-anesthetics" title="Local Anesthetics">Local Anesthetics</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/search/major-laparotomy-open-surgery" title="Major Laparotomy (Open Surgery)">Major Laparotomy (Open Surgery)</a></li>
+                                        <li class="seo-title"><a class="" href="/search/intralock-implant" title="Intralock Implant">Intralock Implant</a></li>
+                                    </ul><a class="link-more" href="/procedures/directory" rel="nofollow">See more ...</a></div>
+                            </li>
+                            <li>
+                                <div class="footer-nav">
+                                    <h6>General medical information</h6>
+                                    <ul>
+                                        <li class="seo-title"><a class="seo-link" href="/info/procedure/liposuction" title="What is Liposuction: Overview, Benefits, and Expected Results">What is Liposuction: Overview, Benefits, and Expected Results</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/specialty/plastic-surgeons" title="What is Plastic Surgery: An Overview">What is Plastic Surgery: An Overview</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/condition/obsessive-compulsive-disorder" title="What is Obsessive Compulsive Disorder: Symptoms, Causes, Diagnosis, and Treatment">What is Obsessive Compulsive Disorder: Symptoms, Causes, Diagnosis, and Treatment</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/condition/pancreatic-cancer" title="What is Pancreatic Cancer: Symptoms, Causes, Diagnosis, and Treatment">What is Pancreatic Cancer: Symptoms, Causes, Diagnosis, and Treatment</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/condition/colon-cancer" title="What is Colon Cancer: Symptoms, Causes, Diagnosis, and Treatment">What is Colon Cancer: Symptoms, Causes, Diagnosis, and Treatment</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/specialty/psychologists" title="What is Child Psychology: An Overview">What is Child Psychology: An Overview</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/procedure/chemotherapy" title="What is Chemotherapy: Overview, Benefits, and Expected Results">What is Chemotherapy: Overview, Benefits, and Expected Results</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/info/specialty/general-practitioners" title="What is General Practitioner: An Overview">What is General Practitioner: An Overview</a></li>
+                                    </ul><a class="link-more" href="/info/directory" rel="nofollow">See more ...</a></div>
+                            </li>
+                            <li>
+                                <div class="footer-nav">
+                                    <h6>Medical tourism on DocDoc</h6>
+                                    <ul>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/calculus-of-gallbladder-with-cholecystitis-treatment-in-sea" title="Calculus of Gallbladder with Cholecystitis Treatment in SEA">Calculus of Gallbladder with Cholecystitis Treatment in SEA</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/why-indonesians-should-travel-to-sea-for-artery-rechanneling" title="Why Indonesians Should Travel to SEA for Artery Rechanneling">Why Indonesians Should Travel to SEA for Artery Rechanneling</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/indulge-in-southeast-asia-s-quality-facial-treatments" title="Indulge in Southeast Asia's Quality Facial Treatments">Indulge in Southeast Asia's Quality Facial Treatments</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/why-you-should-get-lasik-surgery-done-in-singapore" title="Why You Should Get LASIK Surgery Done in Singapore">Why You Should Get LASIK Surgery Done in Singapore</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/cheaper-and-more-reliable-glaucoma-treatment-in-se-asia" title="Cheaper and More Reliable Glaucoma Treatment in SE Asia">Cheaper and More Reliable Glaucoma Treatment in SE Asia</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/westerners-head-to-southeast-asia-for-spinal-fusion-surgery" title="Westerners Head to Southeast Asia for Spinal Fusion Surgery">Westerners Head to Southeast Asia for Spinal Fusion Surgery</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/avoid-waiting-times-for-ent-care-in-southeast-asia" title="Avoid Waiting Time for ENT Care in Southeast Asia">Avoid Waiting Time for ENT Care in Southeast Asia</a></li>
+                                        <li class="seo-title"><a class="seo-link" href="/medical-travel/take-advantage-of-advanced-macular-hole-treatment-in-sea" title="Take Advantage of Advanced Macular Hole Treatment in SEA">Take Advantage of Advanced Macular Hole Treatment in SEA</a></li>
+                                    </ul><a class="link-more" href="/medical-travel/directory" rel="nofollow">See more ...</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bar-actions opened"><a class="toggle-footer-bar" href="#"><i class="ico-arrow-down"></i><i class="ico-arrow-up-blue"></i></a></div>
+            </div>
+        </footer>
+    </div>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@graph": [{
+                    "@type": "WebSite",
+                    "name": "DocDoc",
+                    "url": "https://www.docdoc.com"
+                },
+                {
+                    "@type": "Organization",
+                    "url": "https://www.docdoc.com",
+                    "logo": "{% static 'docdoc_pages/images/docdoc-logo.svg' %}",
+                    "contactPoint": [{
+                        "@type": "ContactPoint",
+                        "telephone": "+65 6690 3353",
+                        "areaServed": ["SG"],
+                        "contactType": "customer service"
+                    }],
+                    "sameAs": [
+                        "https://www.linkedin.com/company/docdocasia",
+                        "https://twitter.com/docdoc",
+                        "https://www.youtube.com/user/DocDocAsia"
+                    ]
+                }
+            ]
+        }
+    </script>
+    <script>
+        window.dataTransfer = {};
+        window.dataTransfer.country = "CZ";
+        window.dataTransfer.current_utm = "cz.direct.direct.direct.cz-en-none.none.none.www-docdoc-com-clinics-vidaskin-medical-and-aesthetics-clinic.none.42";
+        window.dataTransfer.is_layout2016 = true;
+
+        window.starOnUrl = '{% static "docdoc_pages/images/star-on.png" %}';
+        window.starOffUrl = '{% static "docdoc_pages/images/star-off.png" %}';
+        window.starHalfUrl = '{% static "docdoc_pages/images/star-half.png" %}';
+        window.SERVER_TIME_DELTA = new Date(1500543597000) - new Date();
+        window.SERVER_TIME_ZONE_OFFSET = 28800000 + new Date().getTimezoneOffset() * 60 * 1000;
+        window.railsEnv = 'production';
+        window.langIso = 'en';
+        window.currentLanguage = 'English';
+        window.isMobile = false;
+        window.fbAppId = '445612352203048';
+        window.gmapLoaded = false;
+        window.isMedtour = true;
+        window.isLoggedin = false;
+        window.userEmail = '';
+        window.delaconCid = '16273';
+        window.defaultPhoneNumber = '+65 6697 5301';
+
+        function loadScript(src, callback) {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = src;
+            script.async = true;
+            script.defer = true;
+            if (callback) {
+                script.addEventListener('load', callback, false);
+            }
+            document.body.appendChild(script);
+        }
+
+        function headLoadedCallback() {
+            loadSequenceJs();
+            if (isIEMobile()) {
+                head.load('{% static "docdoc_pages/css/ie9fix.css" %}');
+            }
+
+        }
+
+        loadScript('{% static "docdoc_pages/js/head.js" %}', headLoadedCallback)
+
+        function loadAllJs() {
+            head.load('{% static "docdoc_pages/js/i18n.js" %}');
+            head.load('{% static "docdoc_pages/js/application_desktop.js" %}');
+            head.load('{% static "docdoc_pages/js/application_medtour2016.js" %}');
+        }
+
+        function loadAllCss() {
+            head.load(["//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"]);
+        }
+
+        function setGmapLoaded() {
+            window.gmapLoaded = true
+        }
+
+        function loadGMapLib() {
+            loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDzyMUtpfDw6wIBWZHwCCQAb7UHWyAVRSQ&callback=setGmapLoaded&v=3.24')
+        }
+
+        function loadJsWithMapIfNeeded() {
+
+        }
+
+        function loadSequenceJs() {
+            head.load("{% static "docdoc_pages/js/application_preload.js" %}");
+            head.load("{% static "docdoc_pages/js/application_plugins.js" %}");
+            loadAllJs();
+            loadJsWithMapIfNeeded();
+        }
+
+        function loadDelacon() {
+            head.load('https://vxml4.plavxml.com/sited/ref/phonenum.jsp?m_id=338&cids=' + window.delaconCid + '&ref=')
+        }
+
+        function isIEMobile() {
+            var regExp = new RegExp("IEMobile", "i");
+            return navigator.userAgent.match(regExp);
+        }
+    </script>
+</body>
+
+</html>
