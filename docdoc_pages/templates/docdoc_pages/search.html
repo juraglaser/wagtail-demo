@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="new-medtour" lang="en">
+<html class="new-medtour" lang="en" ng-app="docdoc" ng-strict-di>
 
 <head>
     <meta charset="utf-8" />
@@ -19,21 +19,33 @@
     <link href="{% static 'docdoc_pages/images/apple-touch-icon.png' %}" rel="apple-touch-icon" />
     <link href="{% static 'docdoc_pages/images/favicon.ico' %}" rel="shortcut icon" />
 
+    <link href="{% static 'docdoc_pages/css/bootstrap-3.3.7.css' %}" media="screen" rel="stylesheet" />
     <link href="{% static 'docdoc_pages/css/application_medtour2016.css' %}" media="screen" rel="stylesheet" />
     <!--[if lte IE 9]>
-        <link href="{% static 'docdoc_pages/css/ie9fix.css' %}" media="screen" rel="stylesheet" />
-	    <script src="{% static 'docdoc_pages/js/classlist.js' %}"></script>
+    <link href="{% static 'docdoc_pages/css/ie9fix.css' %}" media="screen" rel="stylesheet" />
+        <script src="{% static 'docdoc_pages/js/classlist.js' %}"></script>
     <![endif]-->
+
     <link href="https://www.docdoc.com/search" rel="canonical" />
     <link href="https://www.docdoc.com/search" hreflang="en" rel="alternate" />
     <link href="https://www.docdoc.com/id/search" hreflang="id" rel="alternate" />
     <meta content="authenticity_token" name="csrf-param" />
     <meta content="ICnZfC8g0VO8IA+fsb2O31QAiSnGDApKpCtPQTWpR4M=" name="csrf-token" />
+
+    <script src="{% static 'docdoc_pages/js/jquery-3.2.1.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/angular-1.6.4.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/angular-animate-1.6.4.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/bootstrap-3.3.7.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/ui-bootstrap-tpls-2.5.0.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/docdoc.module.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/docdoc.directives.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/docdoc.services.js' %}" type="text/javascript"></script>
+    <script src="{% static 'docdoc_pages/js/docdoc.controllers.js' %}" type="text/javascript"></script>
 </head>
 
 <body class="app-body new-medtour en" data-country_code="CZ">
     <div class="wrapper wrapper-inner-pages small-padding">
-        <header class="header" ng-controller="AuthController" ng-init="init()">
+        <header class="header">
             <div class="header-top">
                 <div class="shell">
                     <div class="header-inner"><a class="logo" href="/docdoc/"><img alt="logo" data-src="{% static 'docdoc_pages/images/logo-header2x.png' %}" height="26" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="138" /></a>
@@ -323,65 +335,58 @@
                     </div>
                 </div>
             </section>
-            <section class="section-search-grid">
+            <section ng-controller="SearchCtrl as search" class="section-search-grid">
                 <div class="shell">
                     <div class="section-inner">
                         <aside class="section-sidebar">
                             <div class="widgets">
                                 <div class="widget widget-filter">
-                                    <div class="widget-head"><a class="btn btn-white reset" href="#">Reset</a>
-                                        <h2>Filter by</h2><a class="btn btn-white btn-close-filter" href="#"> Done</a></div>
+                                    <div class="widget-head">
+                                        <a class="btn btn-white reset" href="#">Reset</a>
+                                        <h2>Filter by</h2>
+                                        <a class="btn btn-white btn-close-filter" href="#"> Done</a>
+                                    </div>
                                     <div class="widget-body">
-                                        <div class="accordion accordion-filter">
-                                            <div class="accordion-section ng-hide hidden">
-                                                <div class="accordion-head">
+                                        <uib-accordion close-others="true" class="accordion accordion-filter">
+                                            <!--div uib-accordion-group class="accordion-section hidden">
+                                                <uib-accordion-heading class="accordion-head">
                                                     <h6>name</h6>
-                                                </div>
+                                                </uib-accordion-heading>
                                                 <div class="accordion-body">
                                                     <div class="input-group"><input class="form-control" id="q" type="text" /></div>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by provider</h6>
-                                                </div>
+                                            </div-->
+                                            <div ng-repeat="(key, val) in search.funnelItems" uib-accordion-group class="accordion-section">
+                                                <uib-accordion-heading>
+                                                     <div>
+                                                        filter by {% verbatim %}{{key}}{% endverbatim %}
+                                                        <i class="pull-right glyphicon" {% verbatim %}ng-class="{'glyphicon-minus':$parent.isOpen, 'glyphicon-plus':!$parent.isOpen}"{% endverbatim %}></i>
+                                                     </div>
+                                                </uib-accordion-heading>
                                                 <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="provider-types"></ul>
+                                                    <ul class="list-checkboxes facet">
+                                                        <div data-reactroot="" class="ais-root ais-refinement-list">
+                                                            <div class="ais-body ais-refinement-list--body">
+                                                                <div class="ais-refinement-list--list">
+                                                                    <div ng-repeat="item in search.funnelItems[key].items" class="ais-refinement-list--item">
+                                                                        <div>
+                                                                            <li>
+                                                                                <div class="checkbox-alt-small">
+                                                                                    <a href="" toggle-check-on-click class="facet-item">
+                                                                                        <input class="ais-refinement-list--checkbox" value="{% verbatim %}{{item}}{% endverbatim %}" type="checkbox"/>
+                                                                                        <label for="" class="form-label">{% verbatim %}{{item}}{% endverbatim %}</label>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </li>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by location</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="countries"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by specialty</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="specialties"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by procedure</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="procedures"></ul>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-section">
-                                                <div class="accordion-head">
-                                                    <h6>Filter by body part</h6>
-                                                </div>
-                                                <div class="accordion-body">
-                                                    <ul class="list-checkboxes facet" id="body_locations"></ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </uib-accordion>
                                     </div>
                                     <div class="widget-actions">
                                         <div class="ng-hide hidden" id="reset-filter-text">Reset filter</div>
@@ -392,12 +397,37 @@
                         </aside>
                         <div class="section-content">
                             <header class="section-head">
-                                <h2 id="search-title"> Providers in <span>Asia</span></h2><button class="btn btn-filter">Filter</button></header>
+                                <h2 id="search-title">
+                                    Providers in <span>Asia</span>
+                                </h2>
+                                <button class="btn btn-filter">Filter</button>
+                            </header>
                             <div class="section-body">
-                                <div class="loading block-ui">
+                                <div class="loading block-ui" style="display:none;">
                                     <div class="loading-spinner"></div>
                                 </div>
-                                <div id="hits"></div>
+                                <div id="hits">
+                                    <div class="ais-hits">
+                                        <div ng-repeat="provider in search.results" class="ais-hits--item">
+                                            <div class="box-clinic">
+                                                <div class="box-image">
+                                                    <a href="{% verbatim %}{{provider.profilePath}}{% endverbatim %}">
+                                                        <img src="{% static 'docdoc_pages/images/' %}{% verbatim %}{{provider.thumbImgUrl}}{% endverbatim %}" />
+                                                    </a>
+                                                </div>
+                                                <div class="box-content">
+                                                    <h5><a href="{% verbatim %}{{provider.profilePath}}{% endverbatim %}">{% verbatim %}{{provider.name}}{% endverbatim %}</a></h5>
+                                                    <h6 class="country">{% verbatim %}{{provider.typeEn}} in {{provider.cityCountryNameEn}}{% endverbatim %}</h6>
+                                                    <p><strong>Language Spoken:</strong> {% verbatim %}{{provider.languages}}{% endverbatim %}</p>
+                                                </div>
+                                                <div class="box-actions">
+                                                    <span ng-class="{'true':provider.verified, 'false':!provider.verified}" class="verified">Verified <i class="ico-verified"></i></span>
+                                                    <a href="{% verbatim %}{{provider.profilePath}}{% endverbatim %}" class="btn btn-primary">MORE DETAILS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="section-actions">
                                 <div class="paging" id="pagination"></div>
@@ -588,7 +618,6 @@
             ]
         }
     </script>
-    <div class="ng-hide hidden" data-value="false" id="ga_custom_dimension"></div>
 </body>
 <script>
         window.dataTransfer = {};
@@ -633,13 +662,13 @@
 
         }
 
-        loadScript('{% static "docdoc_pages/js/head.js" %}', headLoadedCallback)
+        // loadScript('{% static "docdoc_pages/js/head.js" %}', headLoadedCallback)
 
         function loadAllJs() {
-            head.load('{% static "docdoc_pages/js/i18n.js" %}');
-            head.load('{% static "docdoc_pages/js/algolia.js" %}');
-            head.load('{% static "docdoc_pages/js/application_desktop.js" %}');
-            head.load('{% static "docdoc_pages/js/application_medtour2016.js" %}');
+            // head.load('{% static "docdoc_pages/js/i18n.js" %}');
+            // head.load('{% static "docdoc_pages/js/algolia.js" %}');
+            // head.load('{% static "docdoc_pages/js/application_desktop.js" %}');
+            // head.load('{% static "docdoc_pages/js/application_medtour2016.js" %}');
         }
 
         function loadAllCss() {
