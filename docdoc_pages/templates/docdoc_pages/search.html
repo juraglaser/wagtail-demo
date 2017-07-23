@@ -368,13 +368,13 @@
                                                         <div data-reactroot="" class="ais-root ais-refinement-list">
                                                             <div class="ais-body ais-refinement-list--body">
                                                                 <div class="ais-refinement-list--list">
-                                                                    <div ng-repeat="item in search.funnelItems[key].items" class="ais-refinement-list--item">
+                                                                    <div ng-repeat="(facet, facetVal) in search.funnelItems[key]" class="ais-refinement-list--item">
                                                                         <div>
                                                                             <li>
                                                                                 <div class="checkbox-alt-small">
-                                                                                    <a href="" toggle-check-on-click class="facet-item">
-                                                                                        <input class="ais-refinement-list--checkbox" value="{% verbatim %}{{item}}{% endverbatim %}" type="checkbox"/>
-                                                                                        <label for="" class="form-label">{% verbatim %}{{item}}{% endverbatim %}</label>
+                                                                                    <a ng-click="search.toggleFilter(key,facet); search.search();" href="" toggle-check-on-click class="facet-item">
+                                                                                        <input class="ais-refinement-list--checkbox" value="{% verbatim %}{{key}}__{{facet}}{% endverbatim %}" type="checkbox"/>
+                                                                                        <label for="" class="form-label">{% verbatim %}{{facet}}{% endverbatim %}</label>
                                                                                     </a>
                                                                                 </div>
                                                                             </li>

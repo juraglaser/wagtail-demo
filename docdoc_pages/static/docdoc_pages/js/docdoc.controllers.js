@@ -2,82 +2,59 @@
 
 angular.module("docdoc")
 	.controller("SearchCtrl",[
-		"$scope", "$window", "$location", function SearchController(
-		 $scope,   $window,   $location) {
+		"$scope", "Search", function SearchController(
+		 $scope,   Search) {
 
-    this.funnelItems = {
-        "provider": {
-            idx: 0,
-            items: ["Doctor", "Clinic", "Hospital"]
-        },
-        "location": {
-            idx: 1,
-            items: ["Thailand", "India", "Malaysia", "Singapore", "Philippines", "South Korea", "Hong Kong"]
-        },
-        "specialty": {
-            idx: 2,
-            items: ["Internal Medicine", "Obstetrics & Gynaecology", "Orthopaedics", "Paediatrics", "General Surgery", "General Practice", "Radiology", "Plastic Surgery", "General Dentistry", "Oncology"]
-        },
-        "procedure": {
-            idx: 3,
-            items: ["First Consultation", "Follow Up Consultation", "Consultation", "General Consultation", "Dental Implants", "Scaling and Polishing", "Breast Reduction", "Medical Report", "Long Consultation", "Colonoscopy"]
-        },
-        "body part": {
-            idx: 4,
-            items: ["Skin", "Tooth", "Stomach", "Bone", "Joint", "Ovarium", "Uterus", "Vagina", "Brain", "Abdomen"]
-        }
+    this.funnelItems = {};
+    this.activeFilters = {};
+    this.results = [];
+
+    this.search = function() {
+        var self = this;
+        Search.getResults({ filters:this.activeFilters })
+    	.then(function(result) { // result = {data:string|Object, headers:function, config:Object, status:number, statusText:string}
+    		var filters = {};
+    		self.results = result.data["providers"];
+    		self.funnelItems = result.data["facets"];
+
+    		if (!angular.isObject( self.activeFilters ) || Object.keys( self.activeFilters ).length == 0) {
+                for (var category in result.data["facets"]) {
+                    filters[category] = [];
+                }
+                self.activeFilters = filters;
+    		}
+    	})
+    	.catch(function(result) {
+    		console.error("There was an error when calling API function:");
+        	console.error(result);
+    	});
     };
 
-    this.results = [
-        {
-            name: "Dr. Wong Nan-Yaw",
-            typeEn: "DOCTOR",
-            cityCountryNameEn: "SINGAPORE",
-            profilePath: "#",
-            thumbImgUrl: "doctor-avatar.png",
-            languages: "English, Hokkien, Mandarin"
-
-        },
-        {
-            name: "Dr. Mukund H. Doshi",
-            typeEn: "DOCTOR",
-            cityCountryNameEn: "Chennai, India",
-            profilePath: "#",
-            thumbImgUrl: "doctor-avatar.png",
-            languages: "Cantonese, English, Hindi, Hokkien, Malay, Mandarin, Urdu"
-
-        },
-        {
-            name: "Centre for Foot and Ankle Surgery (Mount Elizabeth Hospital)",
-            typeEn: "clinic",
-            cityCountryNameEn: "Singapore",
-            profilePath: "#",
-            thumbImgUrl: "clinic-avatar.png",
-            languages: "Bahasa Indonesia, English, Mandarin, Tamil"
-
-        },
-        {
-            name: "Thomson Medical Centre",
-            typeEn: "hospital",
-            cityCountryNameEn: "Bangkok, Thailand",
-            profilePath: "#",
-            thumbImgUrl: "clinic-avatar.png",
-            languages: "Arabic, English, Thai"
-        },
-        {
-            name: "iHeal Medical Centre Kuala Lumpur",
-            typeEn: "hospital",
-            cityCountryNameEn: "Hospital in Kuala Lumpur, Malaysia",
-            profilePath: "#",
-            thumbImgUrl: "clinic-avatar.png",
-            languages: "Bahasa Indonesia, Bahasa Melayu, Cantonese, English, Mandarin"
+    this.toggleFilter = function(category, value) {
+        if (!angular.isArray( this.activeFilters[category] )) {
+            this.activeFilters[category] = [];
         }
-    ];
+
+        var idx = this.activeFilters[category].indexOf(value);
+        if (idx < 0)
+            this.activeFilters[category].push(value);
+        else
+            this.activeFilters[category].splice(idx, 1);
+    }
 
 	this.init = function() {
-	    console.debug("SearchCtrl: init");
+	    this.search();
 	};
 
+//    $scope.$watch(
+//		angular.bind(this, function() {
+//			return this.activeFilters;
+//		}),
+//		angular.bind(this, function(newValue) {
+//			this.search();
+//		},
+//		true)
+//    );
 
 	// initial actions
 	this.init();
